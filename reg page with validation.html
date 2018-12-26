@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/XHTML1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+div.header {
+background:lightgreen;
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100px;
+text-align:center;
+
+ }
+ div.leftcol {
+ background:white;
+position:absolute;
+top:100px;
+left:0px;
+width:50%;
+height:600px;
+ }
+  
+  div.rightcol {
+ background:white;
+position:absolute;
+top:100px;
+left:50%;
+width:50%;
+height:600px;
+text-align:center;
+ }
+ .col{
+display:none;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+	}
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+#image{
+	background-color:#FFFFFF;
+	height:400px;
+	width:600px;
+	float:left;
+	padding:50px;
+}
+#my11{
+width: 10em; 
+	height: 3em;
+	text-align:center};
+</style>
+</head>
+<body>
+<div class="header"><h1>TASTING TABLE</h1></div>
+<div class="leftcol" >
+<div id="image">
+<img src="https://d2x3bkdslnxkuj.cloudfront.net/2396470_300.jpg" id="mainpage" height="400px" width="500px" />
+</div>
+<table id="maintable"  width="80%">
+<tr><th align="center" colspan="2" id="Final"></th></tr>
+<tr>
+<td>Name:</td>
+<td id="FinalName1"></td>
+</tr>
+<tr>
+<td>UserName:</td>
+<td id="FinalName"></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td id="FinalEmail"></td>
+</tr>
+<tr>
+<td>Phone Number:</td>
+<td id="FinalPhno"></td>
+</tr>
+<tr>
+<td>Cell number:</td>
+<td id="Finalnumber1"></td>
+</tr>
+<tr>
+<td>Date of birth:</td>
+<td id="dob"></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td id="FinalGender"></td>
+</tr>
+<tr>
+<td>Language:</td>
+<td id="FinalLanguage"></td>
+</tr>
+<tr>
+<td>Hobbies:</td>
+<td id="FinalHobbies"></td>
+</tr>
+</table>
+</div>
+
+<div class="rightcol">
+<button type="button" id="my11" class="accordion" style=" margin-left:auto;margin-right:auto;display:block;margin-top:16%;margin-bottom:0%;background:gray;color:white">sign in</button>
+<div class="panel">
+<form method="get"  id="my16" style="background:silver">
+<table width="100%" border="0">
+<tr>
+<td width="20%"><b>username:</b></td><td width="40%"><input type="text" id="my13"></td><td width="40%"><p id="con" style="color:red";></p></td></tr>
+<tr>
+<td width="20%"><b>password:</b></td><td width="40%"><input type="password" id="my14" ></td><td width="40%"><p id="con1" style="color:red";></p></td></tr>
+<tr>
+<td colspan="3"><input type="button" value="submit" id="sub1" onclick="return fun1( )"></td>
+</tr></table></form></div>
+
+<button type="button" id="my11" class="accordion" style="margin-left:auto;margin-right:auto;display:block;margin-top:13%;margin-bottom:0%;background:gray;color:white">sign up</button>
+<div class="panel">
+<form method="get"  id="my" style="background:silver"  >
+<table width="100%" border="0" >
+<tr>
+<td width="20%"><b>name:</b></td><td width="40%"><input type="text" id="mys" ></td>
+<td width="40%"><p id="demo" style="color:red";></p></td></tr>
+<tr>
+<td width="20%"><b>Username:</b></td><td width="40%"><input type="text" id="my1" ></td>
+<td width="40%"><p id="demo1" style="color:red";></p></td></tr>
+<tr>
+<td width="20%"><b>password:</b></td><td width="40%"><input type="password" id="my3" ></td>
+<td width="40%"><p id="demo2" style="color:red";></p></td></tr>
+<tr>
+<td width="20%"><b>confirm password:</b></td><td width="40%"><input type="password" id="my0" ></td>
+<td width="40%"><p id="demo3" style="color:red";></p></td></tr>
+<tr>
+<td width="20%"><b>email:</b></td><td width="40%"><input type="text" id="my4"></td>
+<td width="40%"><p id="demo4" style="color:red";></p></td></tr>
+<tr>
+<td width="20%"><b>phone number:</b></td><td width="40%"><input type="text" id="my5" ></td>
+<td width="40%"><p id="demo5" style="color:red";></p></td></tr>
+<tr>
+<td width="20%"><b>Cell number:</b></td><td width="40%"><input type="text" id="number1" ></td>
+<td width="40%"><p id="demo6" style="color:red";></p></td></tr>
+
+<tr>
+<td width="20%"><b>Dob:</b></td>
+<td width="40%"><input type="date" id="mydate" ></td>
+<td width="40%"><p id="demo8" style="color:red";></p></td>
+</tr><tr>
+<td width="20%"><b>gender:</b></td><td width="40%"><input type="radio" value="male" name="select" id="genderm" />
+male<input type="radio" value="female" name="select" id="genderf" />
+female</td></tr>
+<tr>
+<td width="20%"><b>language:</b></td>
+<td width="40%"><select id="language">
+<option value="--SELECT--">--SELECT--</option>
+<option value="english">english</option>
+<option value="tamil">tamil</option>
+<option value="hindi">hindi</option>
+<option value="telugu">telugu</option>
+</select>
+</td>
+</tr>
+<tr><td width="20%"><b>hobbies:</b></td><td width="40%">yes<input type="checkbox" id="my10"  onclick="preparepage()"></td></tr>
+<tr><td></td><td><div id="hobbies" class="col">
+singing<input type="checkbox" id="singing" ><br />
+dancing<input type="checkbox" id="dancing" ><br />
+reading<input type="checkbox" id="reading" ><br />
+cooking<input type="checkbox" id="cooking" ><br />
+swimming<input type="checkbox" id="swimming" ><br /></div></td></tr>
+<tr>
+<td colspan="3"><input type="button" value="submit" id="sub2" onclick="return fun( )"></td>
+</tr></table></form></div></div>
+
+</body>
+<script type="text/javascript">
+function preparepage(){
+document.getElementById("my10").onclick=function(){
+if(document.getElementById("my10").checked){
+document.getElementById("hobbies").style.display="block";
+}
+else{
+document.getElementById("hobbies").style.display="none";
+}};
+document.getElementById("hobbies").style.display="none";
+}
+
+function fun(){
+var re= /^[.a-zA-Z ]{6,15}$/;
+var c=document.getElementById("demo");
+var a= document.getElementById("mys").value;
+var re1=/^[.a-zA-Z0-9 ]{6,15}$/;
+var b= document.getElementById("my1").value;
+var d= document.getElementById("demo1");
+var re2=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{6,15}$/;
+var e=document.getElementById("my3").value;
+var f=document.getElementById("demo2");
+var g=document.getElementById("my0").value;
+var h=document.getElementById("demo3");
+var re3=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var j=document.getElementById("my4").value;
+var k=document.getElementById("demo4");
+var re4=/^\+?[0-9-]{10,11}$/;
+var re5=/^\([0-9]{3}\)\-\([0-9]{8}\)$/;
+var l=document.getElementById("my5").value;
+var m=document.getElementById("number1").value;
+var n=document.getElementById("demo5");
+var o=document.getElementById("demo6");
+var p=document.getElementById("mydate").value;
+var q=document.getElementById("demo8");
+if(document.getElementById("my1").value==''||document.getElementById("my3").value==''||document.getElementById("my4").value==''||document.getElementById("my5").value==''||!(genderf.checked||genderm.checked)||language.value=="--SELECT--")
+{
+if(p=="")
+{
+q.innerHTML=="enter ur dob";
+}
+else{
+q.innerHTML=" ";
+}
+if(!re1.test(b))
+{
+d.innerHTML="enter valid username";
+}
+else
+{
+d.innerHTML=" ";
+}
+if(!re.test(a))
+{
+c.innerHTML="enter valid name";
+}
+else
+{
+c.innerHTML=" ";
+}
+if(!re2.test(e))
+{
+f.innerHTML="enter valid password";
+}
+else{
+f.innerHTML=" ";
+}
+if(g!=e){
+h.innerHTML="check your password";
+}
+else
+{
+h.innerHTML=" ";
+}
+if(!re3.test(j))
+{
+k.innerHTML="enter valid email id";
+}
+else{
+k.innerHTML=" ";
+}
+if(!re4.test(l))
+{
+n.innerHTML="enter valid phone no";
+}
+else{
+n.innerHTML=" ";
+}
+if(!re5.test(m))
+{
+o.innerHTML="enter valid cell no";
+}
+else{
+o.innerHTML=" ";
+}
+window.alert("enter all the details!");}
+if(re1.test(b)&&re.test(a)&&re2.test(e)&&re3.test(j)&&re4.test(l)&&re5.test(m)&&(genderf.checked||genderm.checked)&&language.value!="--SELECT--")
+{
+document.getElementById("Final").innerHTML="You have been successfully registered. The data which you have entered :"+"<br />";
+document.getElementById("FinalName1").innerHTML=document.getElementById("mys").value;
+document.getElementById("FinalName").innerHTML=document.getElementById("my1").value;
+	document.getElementById("FinalEmail").innerHTML=document.getElementById("my4").value;
+	document.getElementById("FinalPhno").innerHTML=document.getElementById("my5").value;
+	document.getElementById("Finalnumber1").innerHTML=document.getElementById("number1").value;
+	document.getElementById("dob").innerHTML=document.getElementById("mydate").value;
+	if(document.getElementById("genderm").checked)
+		document.getElementById("FinalGender").innerHTML="Male";
+	else
+		document.getElementById("FinalGender").innerHTML="Female";
+	document.getElementById("FinalLanguage").innerHTML=document.getElementById("language").value;
+	if(document.getElementById("my10").checked)
+	{
+		var myHob=document.getElementById("FinalHobbies");
+		if(document.getElementById("singing").checked)
+		myHob.innerHTML="Singing";
+		if(document.getElementById("dancing").checked)
+		myHob.innerHTML+=", Dancing";	
+		if(document.getElementById("reading").checked)
+		myHob.innerHTML+=", Reading";	
+		if(document.getElementById("cooking").checked)
+		myHob.innerHTML+=", Cooking";	
+		if(document.getElementById("swimming").checked)
+		myHob.innerHTML+=", Swimming";	
+	}
+}
+}
+
+var myimage=document.getElementById("mainpage");
+var imgarray=["https://d2x3bkdslnxkuj.cloudfront.net/1805299_300.jpg","https://d2x3bkdslnxkuj.cloudfront.net/2383159_300.jpg","https://d2x3bkdslnxkuj.cloudfront.net/2396470_300.jpg"];
+var imgindex=0;
+function changeimage(){
+myimage.setAttribute("src",imgarray[imgindex]);
+imgindex++;
+if(imgindex>=imgarray.length)
+imgindex=0;
+}
+var inthand=setInterval(changeimage,1000);
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display == "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+function fun1(){
+var e=/^[.a-zA-Z0-9 ]{6,15}$/;
+var f=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{6,15}$/;
+var d=document.getElementById("con");
+var c=document.getElementById("con1");
+var h=document.getElementById("con");
+var j=document.getElementById("con1");
+if(!e.test(document.getElementById("my13").value))
+{
+d.innerHTML="enter correct username";
+}
+else
+{
+d.innerHTML=" ";
+}
+if(!f.test(document.getElementById("my14").value))
+{
+c.innerHTML="enter correct password";
+}
+else
+{
+c.innerHTML=" ";
+}
+if((document.getElementById("my13").value)!=(document.getElementById("my1").value)){
+h.innerHTML="username didnot match";}
+if((document.getElementById("my14").value)!=(document.getElementById("my3").value)){
+j.innerHTML="password didnot match";}
+if(e.test(document.getElementById("my13").value)&&f.test(document.getElementById("my14").value)&&(document.getElementById("my13").value)==(document.getElementById("my1").value)&&(document.getElementById("my14").value)==(document.getElementById("my3").value)){
+location.href="slide.html";
+}
+}
+</script>
+</html>
